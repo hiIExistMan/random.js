@@ -12,6 +12,10 @@ var RNG = RNG || {
     //mapping the value
     let mapped =  Math.min(min, max)+(val%abs(max-min));
     // returning for use
-    return mapped;
+    if(onlyInt){
+      return Math.round(mapped);
+    } else {
+      return mapped; 
+    }
   }
 }
