@@ -1,3 +1,4 @@
+
 // objects are used for namespaces here
 var RNG = RNG || {
   // all are important for the "random" formula using the time
@@ -10,12 +11,20 @@ var RNG = RNG || {
     let val = ((((this.a * this.pRandom) + this.b) %  this.m));
     this.pRandom = val;
     //mapping the value
-    let mapped =  Math.min(min, max)+(val%Math.abs(max-min));
+    let mapped =  Math.min(min, max)+(val%abs(max-min));
     // returning for use
     if(onlyInt){
       return Math.round(mapped);
     } else {
       return mapped; 
     }
+  }
+}
+
+function abs(val){
+  if(v > 0){
+    return v;
+  } else {
+    return -v;
   }
 }
