@@ -10,7 +10,7 @@ var RNG = RNG || {
     let val = ((((this.a * this.pRandom) + this.b) %  this.m));
     this.pRandom = val;
     //mapping the value
-    let mapped =  Math.min(min, max)+(val%abs(max-min));
+    let mapped =  Math.min(min, max)+(val%Math.abs(max-min));
     // returning for use
     if(onlyInt){
       return Math.round(mapped);
